@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" fill="none" viewBox="0 0 84 84">
+  <circle cx="42" cy="42" r="42" fill="#AEEA00"/>
+  <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M62.308 56.77H21.692A3.703 3.703 0 0 1 18 53.076v-7.384c0-4.062 3.323-7.385 7.385-7.385h33.23c4.062 0 7.385 3.323 7.385 7.385v7.384a3.703 3.703 0 0 1-3.692 3.692Z"/>
+  <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M60.462 38.308H23.539l3.692-8.492c1.108-2.585 3.692-4.431 6.646-4.431h16.062c2.953 0 5.538 1.846 6.83 4.43l3.693 8.493ZM30.923 56.77H19.846v3.692a3.703 3.703 0 0 0 3.692 3.692h3.693a3.703 3.703 0 0 0 3.692-3.692v-3.693Zm33.231 0H53.077v3.692a3.703 3.703 0 0 0 3.693 3.692h3.692a3.703 3.703 0 0 0 3.692-3.692v-3.693Zm-12.924 0H32.77l2.585-5.355c.553-1.292 1.846-2.03 3.323-2.03h6.461c1.477 0 2.77.738 3.323 2.03l2.77 5.354Z"/>
+  <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M49.385 25.385h-14.77l1.477-5.908c.185-.738.923-1.477 1.846-1.477h8.123c.923 0 1.662.554 1.846 1.477l1.478 5.908Z"/>
+  <rect width="7" height="7" x="54" y="45" stroke="#0A0A0A" stroke-width="2" rx="3.5"/>
+  <rect width="7" height="7" x="23" y="45" stroke="#0A0A0A" stroke-width="2" rx="3.5"/>
+</svg>

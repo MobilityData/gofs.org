@@ -1,0 +1,52 @@
+name: Update website on server
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - '.github/**'
+      - 'scripts/**'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Load secrets from 1Password
+      id: onepw_secrets
+      uses: 1password/load-secrets-action@v2.0.0
+      with:
+          export-env: true # Export loaded secrets as environment variables
+      env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          ACTION_GXFS_WEBSERVER_SSH_HOST: "op://rbiv7rvkkrsdlpcrz3bmv7nmcu/kttdw7r3jp6rir7rtgkwk2a22q/ACTION_GXFS_WEBSERVER_SSH_HOST"
+          ACTION_GXFS_WEBSERVER_SSH_PORT: "op://rbiv7rvkkrsdlpcrz3bmv7nmcu/kttdw7r3jp6rir7rtgkwk2a22q/ACTION_GXFS_WEBSERVER_SSH_PORT"
+          ACTION_GXFS_WEBSERVER_SSH_USER: "op://rbiv7rvkkrsdlpcrz3bmv7nmcu/kttdw7r3jp6rir7rtgkwk2a22q/ACTION_GXFS_WEBSERVER_SSH_USER"
+          ACTION_GXFS_WEBSERVER_SSH_PRIVATE_KEY: "op://rbiv7rvkkrsdlpcrz3bmv7nmcu/kttdw7r3jp6rir7rtgkwk2a22q/ACTION_GXFS_WEBSERVER_SSH_PRIVATE_KEY"
+          
+    - name: executing remote ssh commands using password
+      id: ssh-step
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ env.ACTION_GXFS_WEBSERVER_SSH_HOST }}
+        username: ${{ env.ACTION_GXFS_WEBSERVER_SSH_USER }}
+        key: ${{ env.ACTION_GXFS_WEBSERVER_SSH_PRIVATE_KEY }}
+        port: ${{ env.ACTION_GXFS_WEBSERVER_SSH_PORT }}
+        script: |
+                    ./gtfs_org_website_updater.sh
+
+    - name: Check for errors in the output
+      run: |
+        if echo "${{ steps.ssh-step.outputs.stdout }}" | grep -i -e "error" -e "fatal" -e "exception" -e "fail" -e "critical" -e "segfault" -e "panic" -e "abort" -e "unable" -e "invalid" -e "stack trace" -e "segmentation fault" -e "timeout" -e "missing" -e "not found" -e "permission denied" -e "unsuccessful" -e "could not" -e "fatal error" -e "unsupported" -e "unable to"; then
+          echo "Error found, failing the workflow."
+          exit 1
+        fi
+      continue-on-error: false
