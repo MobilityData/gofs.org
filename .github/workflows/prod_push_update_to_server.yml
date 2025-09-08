@@ -41,7 +41,7 @@ jobs:
         key: ${{ env.ACTION_GXFS_WEBSERVER_SSH_PRIVATE_KEY }}
         port: ${{ env.ACTION_GXFS_WEBSERVER_SSH_PORT }}
         script: |
-                    ./gtfs_org_website_updater.sh
+                    ./gofs_org_website_updater.sh
 
     - name: Check for errors in the output
       run: |
