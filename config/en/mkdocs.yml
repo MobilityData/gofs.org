@@ -31,13 +31,13 @@ theme:
     text: Mulish
     code: SF Mono
   features:
-    - navigation.tabs
-    - navigation.indexes
+    # - navigation.tabs
+    # - navigation.indexes
     - navigation.top
     - navigation.footer
     - content.tabs.link
-    - search.suggest
-    - announce.dismiss
+    # - search.suggest
+    # - announce.dismiss
   icon:
     repo: fontawesome/brands/github
 extra_css:
