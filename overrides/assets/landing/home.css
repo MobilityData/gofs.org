@@ -75,6 +75,12 @@
   padding: 5.2rem 1rem;
 }
 
+.content-container a {
+  /* color: #000; */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .content-container header h1 {
   width: 100%;
   text-align: center;
@@ -151,17 +157,22 @@
   line-height: 1.5;
 }
 
-/* 
 .gofs-container a {
-  color: #000;
+  /* color: #000; */
   text-decoration: underline;
   font-weight: bold;
-} */
+}
 
 /* Key Questions on Using... layout */
 .gofs-qa {
   padding: clamp(24px, 5vw, 48px) 0;
   background: var(--md-primary-bg-color);
+}
+
+.gofs-qa__wrap a {
+  /* color: #000; */
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .gofs-qa__wrap {
@@ -345,6 +356,7 @@
   margin-top: 60px;
   width: 100%;
   text-align: center;
+  text-decoration: none;
 }
 
 /** why choose gtfs section end **/

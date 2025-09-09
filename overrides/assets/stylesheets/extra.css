@@ -107,6 +107,7 @@
 
 .md-typeset .md-consent__controls .md-button {
   display: inline-block;
+  text-decoration: none;
 }
 
 /** global header end **/
@@ -179,6 +180,7 @@ table.example {
 /* hide default edit content button */
 .md-content__button {
   display: none;
+  text-decoration: none;
 }
 /* custom edit content button */
 .pencil {
@@ -210,6 +212,11 @@ table.example {
   color: var(--md-primary-bg-color);
   border-color: var(--md-primary-bg-color);
   display: inline-block;
+  text-decoration: none; 
+}
+
+.md-button a {
+  text-decoration: none; 
 }
 
 .md-button--primary,
@@ -219,6 +226,7 @@ table.example {
   background-color: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color);
   border-color: var(--md-primary-bg-color);
+  text-decoration: none; 
 }
 
 .md-button--primary:hover,
@@ -228,6 +236,7 @@ table.example {
   background-color: var(--md-default-bg-color);
   color: var(--md-primary-bg-color);
   border-color: var(--md-primary-bg-color);
+  text-decoration: none; 
 }
 
 /* list style */
@@ -250,6 +259,7 @@ table.example {
   outline: none;
   margin: 0 1em 1em 1em;
   min-width: 12em;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 1219px) {
