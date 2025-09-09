@@ -318,10 +318,13 @@
                 <h3 class="gofs-faq__title">{{text.t("section4block4")}}</h3>
                 <p class="gofs-faq__text">{{text.t("section4block4a")}}</p>
             </div>
-
-            <!-- Your existing button style applies here -->
-            <a href="#" class="gofs-button">{{text.t("gofsRepoButton")}}</a>
         </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="https://github.com/GOFS-lite/GOFS-lite" target="_blank" title="{{ page.next_page.title | striptags }}"
+            class="md-button md-button--primary" style="margin-top: 0px; text-decoration: none;">
+            {{text.t("gofsRepoButton")}}
+        </a>
     </div>
 </section>
 
@@ -341,7 +344,7 @@
                         <p style="margin-top: 0px; margin-bottom: 0px;">{{text.t("section5Subtitle")}}</p>
                         <a href="https://share.mobilitydata.org/slack" target="_blank"
                             title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary"
-                            style="margin-top: 0px;">
+                            style="margin-top: 0px; text-decoration: none;">
                             {{text.t("helpDevelopFutureSlackButton")}}
                         </a>
                     </div>
