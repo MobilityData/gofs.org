@@ -30,204 +30,138 @@
 <section class="content-container">
     <div class="content-inner">
         <header class="md-typeset">
-            <h1 style="color: #0A0A0A;">{{text.t("section1Title")}}</h1>
+            <h1 style="color:#0A0A0A;">{{text.t("section1Title")}}</h1>
         </header>
 
-        <ul class="mdx-list md-typeset">
-
-            <!-- 1st row -->
-            <li class="mdx-list-item fade-in">
-                <div class="icon-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" fill="none" viewBox="0 0 84 84">
-                        <circle cx="42" cy="42" r="42" fill="#AEEA00" />
-                        <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                            stroke-width="2"
-                            d="M62.308 56.77H21.692A3.703 3.703 0 0 1 18 53.076v-7.384c0-4.062 3.323-7.385 7.385-7.385h33.23c4.062 0 7.385 3.323 7.385 7.385v7.384a3.703 3.703 0 0 1-3.692 3.692Z" />
-                        <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                            stroke-width="2"
-                            d="M60.462 38.308H23.539l3.692-8.492c1.108-2.585 3.692-4.431 6.646-4.431h16.062c2.953 0 5.538 1.846 6.83 4.43l3.693 8.493ZM30.923 56.77H19.846v3.692a3.703 3.703 0 0 0 3.692 3.692h3.693a3.703 3.703 0 0 0 3.692-3.692v-3.693Zm33.231 0H53.077v3.692a3.703 3.703 0 0 0 3.693 3.692h3.692a3.703 3.703 0 0 0 3.692-3.692v-3.693Zm-12.924 0H32.77l2.585-5.355c.553-1.292 1.846-2.03 3.323-2.03h6.461c1.477 0 2.77.738 3.323 2.03l2.77 5.354Z" />
-                        <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                            stroke-width="2"
-                            d="M49.385 25.385h-14.77l1.477-5.908c.185-.738.923-1.477 1.846-1.477h8.123c.923 0 1.662.554 1.846 1.477l1.478 5.908Z" />
-                        <rect width="7" height="7" x="54" y="45" stroke="#0A0A0A" stroke-width="2" rx="3.5" />
-                        <rect width="7" height="7" x="23" y="45" stroke="#0A0A0A" stroke-width="2" rx="3.5" />
-                    </svg>
+        <ul class="whichstandard md-typeset">
+            <!-- Row 1 -->
+            <li class="whichstandard__item">
+                <div class="whichstandard__rule" aria-hidden="true"></div>
+                <div class="whichstandard__icon">
+                    <!-- TAXI Ridehail icon -->
+                    <img src="/assets/landing/gofs-icon-taxi-ridehail.svg" alt="Taxi / Ridehail icon" />
                 </div>
-                <div class="text-content">
+                <div class="whichstandard__what">
                     <h3>{{text.t("section1Subtitle1")}}</h3>
                 </div>
-                <div class="arrow-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none" viewBox="0 0 32 30">
-                        <path fill="#AEEA00"
-                            d="M31.414 16.414a2 2 0 0 0 0-2.828L18.686.858a2 2 0 1 0-2.828 2.828L27.172 15 15.858 26.314a2 2 0 1 0 2.828 2.828l12.728-12.728ZM0 15v2h30v-4H0v2Z" />
-                    </svg>
+                <div class="whichstandard__arrow">
+                    <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
                 </div>
-                <div class="text-content">
-                    <h3 class="light" style="margin-top: 15px;">{{text.t("section1TextBlock1")}}</h3>
+                <div class="whichstandard__answer">
+                    <h3 class="light" style="margin-top:15px;">{{text.t("section1TextBlock1")}}</h3>
                 </div>
             </li>
 
-            <!-- 2nd row -->
-            <li class="mdx-list-item fade-in">
-                <div class="icon-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" fill="none" viewBox="0 0 84 84">
-                        <circle cx="42" cy="42" r="42" fill="#AEEA00" />
-                        <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M44.33 52H31m-10.57 0C17.99 52 16 49.94 16 47.41V30.59c0-2.54 1.98-4.59 4.43-4.59h35.48c1.35 0 2.63.64 3.47 1.74l8.14 10.64c.31.41.48.9.48 1.42v8.21c0 2.21-1.79 4-4 4h-9.67M59 40H16" />
-                        <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M26 57a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm23.33 0a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM32 27.07V39.2m17.33-12.13V39.2M65 40h3v6h-3c-1.1 0-2-.9-2-2v-2c0-1.1.9-2 2-2Z" />
-                        <path fill="#0A0A0A"
-                            d="M26 54a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm23.33 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
-                    </svg>
+            <!-- Row 2 -->
+            <li class="whichstandard__item">
+                <div class="whichstandard__rule" aria-hidden="true"></div>
+                <div class="whichstandard__icon">
+                    <!-- Zone-based microtransit icon -->
+                    <img src="/assets/landing/gofs-icon-zone-based-microtransit.svg"
+                        alt="Zone based microtransit icon" />
                 </div>
-                <div class="text-content">
-                    <h3>{{text.t("section1Subtitle2")}}</h3>
+                <div class="whichstandard__what">
+                    <h3 style="margin-top:15px;">{{text.t("section1Subtitle2")}}</h3>
                     <h3 class="light">{{text.t("section1Subtitle2part2")}}</h3>
                 </div>
-                <div class="arrow-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none" viewBox="0 0 32 30">
-                        <path fill="#AEEA00"
-                            d="M31.414 16.414a2 2 0 0 0 0-2.828L18.686.858a2 2 0 1 0-2.828 2.828L27.172 15 15.858 26.314a2 2 0 1 0 2.828 2.828l12.728-12.728ZM0 15v2h30v-4H0v2Z" />
-                    </svg>
+                <div class="whichstandard__arrow">
+                    <!-- green arrow -->
+                    <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
                 </div>
-                <div class="text-content">
-                    <h3 class="light" style="margin-top: 15px;">{{text.t("section1TextBlock2")}}</h3>
+                <div class="whichstandard__answer">
+                    <h3 class="light" style="margin-top:15px;">{{text.t("section1TextBlock2")}}</h3>
                 </div>
             </li>
 
-            <!-- 3rd row -->
-            <li class="mdx-list-item fade-in">
-                <div class="icon-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" fill="none" viewBox="0 0 84 84">
-                        <circle cx="42" cy="42" r="42" fill="#AEEA00" transform="matrix(-1 0 0 1 84 0)" />
-                        <path stroke="#0A0A0A" stroke-linecap="round" stroke-width="2"
-                            d="M59.5 64H29.96A7.96 7.96 0 0 1 22 56.04v0a7.96 7.96 0 0 1 7.96-7.96h4.875a6.665 6.665 0 0 0 6.665-6.665v0a6.665 6.665 0 0 0-6.665-6.665H29.5" />
-                        <path stroke="#0A0A0A" stroke-width="2"
-                            d="M31.563 17c-2.88 0-5.248 1.956-5.811 4.498v.001c-.084.386-.127.78-.127 1.19 0 2.551 1.51 4.761 3.172 6.406a18.068 18.068 0 0 0 2.756 2.221c.228-.153.522-.359.857-.614.814-.62 1.852-1.51 2.78-2.61l.002-.001c1.306-1.54 2.308-3.386 2.308-5.402 0-3.111-2.62-5.689-5.938-5.689Z" />
-                        <path fill="#0A0A0A"
-                            d="M34 22.5c0 1.384-1.126 2.5-2.5 2.5a2.496 2.496 0 0 1-2.5-2.5c0-1.384 1.116-2.5 2.5-2.5s2.5 1.116 2.5 2.5Z" />
-                        <path stroke="#0A0A0A" stroke-linejoin="bevel" stroke-width="2"
-                            d="m55.522 32.826-4.826 4.827v6.825l4.826 4.826h6.826l4.826-4.826v-6.825l-4.827-4.826-6.825-.001Z" />
-                        <path stroke="#0A0A0A" stroke-width="2" d="M59 49v14" />
-                        <path fill="#0A0A0A" d="M62 64c0 1.66-1.351 3-3 3-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3Z" />
-                    </svg>
+            <!-- Row 3 (icon spans rows 3–4) -->
+            <li class="whichstandard__item whichstandard__item--icon-span-2">
+                <div class="whichstandard__rule" aria-hidden="true"></div>
+                <div class="whichstandard__icon">
+                    <!-- Predefined routes icon -->
+                    <img src="/assets/landing/gofs-icon-predefined-routes.svg" alt="Zone based microtransit icon" />
                 </div>
-                <div class="text-content">
-                    <h3>{{text.t("section1Subtitle3")}}</h3>
+                <div class="whichstandard__what">
+                    <h3 style="margin-top:25px;">{{text.t("section1Subtitle3")}}</h3>
                     <h3 class="light">{{text.t("section1Subtitle3part2")}}</h3>
-                    <h3 style="margin-top: 30px;">{{text.t("section1Subtitle3part3")}}</h3>
                 </div>
-                <div class="arrow-holder arrow-holder-double">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none" viewBox="0 0 32 30">
-                        <path fill="#AEEA00"
-                            d="M31.414 16.414a2 2 0 0 0 0-2.828L18.686.858a2 2 0 1 0-2.828 2.828L27.172 15 15.858 26.314a2 2 0 1 0 2.828 2.828l12.728-12.728ZM0 15v2h30v-4H0v2Z" />
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none" viewBox="0 0 32 30">
-                        <path fill="#AEEA00"
-                            d="M31.414 16.414a2 2 0 0 0 0-2.828L18.686.858a2 2 0 1 0-2.828 2.828L27.172 15 15.858 26.314a2 2 0 1 0 2.828 2.828l12.728-12.728ZM0 15v2h30v-4H0v2Z" />
-                    </svg>
+                <div class="whichstandard__arrow" style="margin-top:5px;">
+                    <!-- green arrow -->
+                    <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
                 </div>
-                <div class="text-content">
-                    <h3 style="margin-top: 15px;">&nbsp;</h3>
-                    <h3 class="light">{{text.t("section1TextBlock3")}}</h3>
-                    <h3 class="light" style="margin-top: 30px;">{{text.t("section1TextBlock3part3")}}</h3>
+                <div class="whichstandard__answer">
+                    <h3 class="light" style="margin-top:25px;">{{text.t("section1TextBlock3")}}</h3>
                 </div>
             </li>
 
-            <!-- 4th row -->
-            <li class="mdx-list-item fade-in">
-                <div class="icon-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" fill="none" viewBox="0 0 84 84">
-                        <circle cx="42" cy="42" r="42" fill="#AEEA00" />
-                        <rect width="6" height="6" x="51" y="48" stroke="#0A0A0A" stroke-width="2" rx="3" />
-                        <rect width="6" height="6" x="27" y="48" stroke="#0A0A0A" stroke-width="2" rx="3" />
-                        <rect width="42" height="41" x="21" y="18" stroke="#0A0A0A" stroke-width="2" rx="3" />
-                        <rect width="32" height="16" x="26" y="27" stroke="#0A0A0A" stroke-width="2" rx="3" />
-                        <path stroke="#0A0A0A" stroke-width="2"
-                            d="M21 27h-4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4m4 22v4a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-4m14 0v4a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-4m4-22h4a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-4" />
-                        <rect width="23" height="1" x="30.5" y="22.5" stroke="#0A0A0A" rx=".5" />
-                    </svg>
+            <!-- Row 4 (shares icon from row 3) -->
+            <li class="whichstandard__item whichstandard__item--no-icon">
+                <div class="whichstandard__rule" aria-hidden="true"></div>
+                <div class="whichstandard__what">
+                    <h3>{{text.t("section1Subtitle4")}}</h3>
                 </div>
-                <div class="text-content">
+                <div class="whichstandard__arrow">
+                    <!-- green arrow -->
+                    <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
+                </div>
+                <div class="whichstandard__answer">
+                    <h3 class="light" style="margin-top:15px;">{{text.t("section1TextBlock3part3")}}</h3>
+                </div>
+            </li>
+
+            <!-- Row 5 -->
+            <li class="whichstandard__item">
+                <div class="whichstandard__rule" aria-hidden="true"></div>
+                <div class="whichstandard__icon">
+                    <!-- Fixed route transit icon -->
+                    <img src="/assets/landing/gofs-icon-fixed-route-transit.svg" alt="Fixed route transit" />
+                </div>
+                <div class="whichstandard__what">
                     <h3>{{text.t("section1Subtitle5")}}</h3>
                 </div>
-                <div class="arrow-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none" viewBox="0 0 32 30">
-                        <path fill="#AEEA00"
-                            d="M31.414 16.414a2 2 0 0 0 0-2.828L18.686.858a2 2 0 1 0-2.828 2.828L27.172 15 15.858 26.314a2 2 0 1 0 2.828 2.828l12.728-12.728ZM0 15v2h30v-4H0v2Z" />
-                    </svg>
+                <div class="whichstandard__arrow">
+                    <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
                 </div>
-                <div class="text-content">
-                    <h3 class="light" style="margin-top: 15px;">{{text.t("section1TextBlock5")}}</h3>
+                <div class="whichstandard__answer">
+                    <h3 class="light" style="margin-top:15px;">{{text.t("section1TextBlock5")}}</h3>
                 </div>
             </li>
 
-            <!-- 5th row -->
-            <li class="mdx-list-item fade-in">
-                <div class="icon-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="84" height="84" fill="none" viewBox="0 0 84 84">
-                        <circle cx="42" cy="42" r="42" fill="#AEEA00" />
-                        <g clip-path="url(#a)">
-                            <path fill="#0A0A0A" d="M41.5 30a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
-                            <path stroke="#0A0A0A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M44 43.83v6.91l4.84 1.7c1.56.55 1.56 2.75 0 3.3L44 57.44v.02l4.84 1.7c1.56.55 1.56 2.75 0 3.3l-6.39 2.25c-.14.05-.27.08-.4.09A2.505 2.505 0 0 1 39 62.36V43.83c-5.7-1.16-10-6.22-10-12.29C29 24.62 34.6 19 41.5 19S54 24.62 54 31.54c0 6.07-4.3 11.13-10 12.29Z" />
-                        </g>
-                        <defs>
-                            <clipPath id="a">
-                                <path fill="#fff" d="M28 18h27v47.86H28z" />
-                            </clipPath>
-                        </defs>
-                    </svg>
+            <!-- Row 6 -->
+            <li class="whichstandard__item">
+                <div class="whichstandard__rule" aria-hidden="true"></div>
+                <div class="whichstandard__icon">
+                    <!-- Self-service vehicles icon -->
+                    <img src="/assets/landing/gofs-icon-self-service-vehicles.svg" alt="Self-service vehicles" />
                 </div>
-                <div class="text-content">
-                    <h3>{{text.t("section1Subtitle6")}}</h3>
+                <div class="whichstandard__what">
+                    <h3 style="margin-top:17px;">{{text.t("section1Subtitle6")}}</h3>
+                    <h3 class="light">{{text.t("section1Subtitle6part2")}}</h3>
                 </div>
-                <div class="arrow-holder">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" fill="none" viewBox="0 0 32 30">
-                        <path fill="#AEEA00"
-                            d="M31.414 16.414a2 2 0 0 0 0-2.828L18.686.858a2 2 0 1 0-2.828 2.828L27.172 15 15.858 26.314a2 2 0 1 0 2.828 2.828l12.728-12.728ZM0 15v2h30v-4H0v2Z" />
-                    </svg>
+                <div class="whichstandard__arrow" style="margin-top:3px;">
+                    <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
                 </div>
-                <div class="text-content">
-                    <h3 class="light" style="margin-top: 15px;">{{text.t("section1TextBlock6")}}</h3>
+                <div class="whichstandard__answer">
+                    <h3 class="light" style="margin-top:17px;">{{text.t("section1TextBlock6")}}</h3>
                 </div>
             </li>
         </ul>
     </div>
-
 </section>
 
+<!-- Microtransit grid -->
 <section class="content-container gofs">
     <div class="content-inner">
         <header class="md-typeset">
             <h1 style="color: #0A0A0A;">{{text.t("section2Title")}}</h1>
         </header>
         <div>
-            <p style="text-align: center; font-size: 18px; line-height: 22px; margin-bottom: 50px;">{{text.t("section2Subtitle")}}</p>
+            <p style="text-align: center; font-size: 18px; line-height: 22px; margin-bottom: 50px;">
+                {{text.t("section2Subtitle")}}</p>
             <div class="microtransit-grid">
                 <!-- GOFS -->
                 <div class="microtransit-item">
-                    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M100.249,199.005C155.202,199.005 199.751,154.456 199.751,99.503C199.751,44.548 155.202,0 100.249,0C45.295,0 0.746,44.549 0.746,99.502C0.746,154.456 45.295,199.005 100.249,199.005Z"
-                            style="fill:white;" />
-                        <g clip-path="url(#clipGOFS)">
-                            <path
-                                d="M100,200C155.228,200 200,155.228 200,100C200,44.772 155.228,0 100,0C44.772,0 0,44.772 0,100C0,155.228 44.772,200 100,200Z"
-                                style="fill:white;" />
-                            <path
-                                d="M100,115C108.284,115 115,108.284 115,100C115,91.716 108.284,85 100,85C91.716,85 85,91.716 85,100C85,108.284 91.716,115 100,115Z"
-                                style="fill:rgb(10,10,10);" />
-                            <path
-                                d="M75.765,124.471C62.353,111.059 62.353,89.176 75.765,75.765M124.235,75.53C137.647,88.941 137.647,110.823 124.235,124.235M57.177,143.059C33.412,119.294 33.412,80.941 57.177,57.177M142.824,56.941C166.588,80.706 166.588,119.059 142.824,142.824"
-                                style="fill:none;stroke:rgb(10,10,10);stroke-width:10px;" />
-                        </g>
-                        <defs>
-                            <clipPath id="clipGOFS">
-                                <rect width="200" height="200" />
-                            </clipPath>
-                        </defs>
-                    </svg>
+                    <!-- GOFS icon -->
+                    <img src="/assets/landing/gofs-logo-reversed.svg" alt="GOFS" />
                     <div>
                         <p>{{text.t("section2block1")}}</p>
                         <hr class="white-thick-hr">
@@ -238,19 +172,8 @@
 
                 <!-- GTFS-Flex -->
                 <div class="microtransit-item">
-                    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clipFlex)">
-                            <path fill="#fff"
-                                d="M100 200c55.228 0 100-44.772 100-100S155.228 0 100 0 0 44.772 0 100s44.772 100 100 100Z" />
-                            <path fill="#0A0A0A"
-                                d="M40 112.575c7.07 0 12.8-5.731 12.8-12.8 0-7.07-5.73-12.8-12.8-12.8-7.069 0-12.8 5.73-12.8 12.8 0 7.069 5.731 12.8 12.8 12.8Zm59.825 0c7.069 0 12.8-5.731 12.8-12.8 0-7.07-5.731-12.8-12.8-12.8-7.07 0-12.8 5.73-12.8 12.8 0 7.069 5.73 12.8 12.8 12.8Zm59.8 0c7.069 0 12.8-5.731 12.8-12.8 0-7.07-5.731-12.8-12.8-12.8-7.069 0-12.8 5.73-12.8 12.8 0 7.069 5.731 12.8 12.8 12.8ZM62.775 143.2H52.15l26-87.725h10.625l-26 87.725Zm59.825 0h-10.625l26-87.725H148.6l-26 87.725Z" />
-                        </g>
-                        <defs>
-                            <clipPath id="clipFlex">
-                                <rect width="200" height="200" />
-                            </clipPath>
-                        </defs>
-                    </svg>
+                    <!-- GTFS-Flex icon -->
+                    <img src="/assets/landing/gtfs-flex-logo-reversed.svg" alt="GOFS" />
                     <div>
                         <p>{{text.t("section2block3")}}</p>
                         <hr class="white-thick-hr">
@@ -337,14 +260,14 @@
                 <header class="md-typeset">
                     <h1 style="color: #0A0A0A;">{{text.t("section5Title")}}</h1>
 
-                        <p class="who-can-i-contact">{{text.t("section5Subtitle")}}</p>
-                        </br>
-                        <a href="https://share.mobilitydata.org/slack" target="_blank"
-                            title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary"
-                            style="text-decoration: none;">
-                            {{text.t("helpDevelopFutureSlackButton")}}
-                        </a>
-                        
+                    <p class="who-can-i-contact">{{text.t("section5Subtitle")}}</p>
+                    </br>
+                    <a href="https://share.mobilitydata.org/slack" target="_blank"
+                        title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary"
+                        style="text-decoration: none;">
+                        {{text.t("helpDevelopFutureSlackButton")}}
+                    </a>
+
                 </header>
             </figure>
         </div>

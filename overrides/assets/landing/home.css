@@ -248,11 +248,12 @@
   /* adjust this single value to tune both sides */
 }
 
-/** why choose gtfs section start **/
+/** Which standard(s) should be used? section **/
 .mdx-list {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr auto 2fr;
+  grid-auto-rows: auto;
+  gap: 12px;
 }
 
 .mdx-list>* {
@@ -268,10 +269,23 @@
 }
 
 .mdx-list-item {
-  display: flex;
-  align-items: center;
-  flex: 1 0 48%;
-  flex-wrap: nowrap;
+  display: contents;
+  /* let children participate directly in grid */
+}
+
+.mdx-list-item>* {
+  justify-content: flex-start;
+  /* was center before */
+}
+
+.mdx-list-item:nth-child(1)>*,
+.mdx-list-item:nth-child(3)>* {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.icon-span-2 {
+  grid-row: span 2;
 }
 
 .mdx-list-item .icon-holder {
@@ -355,8 +369,155 @@
   align-items: center;
 }
 
+.icon-holder {
+  grid-column: 1;
+}
+
+.text-content:nth-of-type(1) {
+  grid-column: 2;
+}
+
+.arrow-holder {
+  grid-column: 3;
+}
+
+.text-content:nth-of-type(2) {
+  grid-column: 4;
+}
+
 .mdx-list-item .icon-header svg {
   fill: #AEEA00;
+}
+
+/* Which standard section */
+:root {
+  --icon-size: 84px;
+  --arrow-size: 32px;
+}
+
+.whichstandard {
+  display: grid;
+  grid-template-columns: var(--icon-size) 2fr auto 2fr;
+  /* cols 1..4 */
+  grid-auto-rows: auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.whichstandard>* {
+  display: contents;
+}
+
+/* Row items */
+.whichstandard__item>* {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.whichstandard__item {
+  /* borders like your original */
+  border-top: 2px solid var(--md-secondary-fg-color-white);
+}
+
+.whichstandard__item:last-child {
+  border-bottom: 2px solid var(--md-secondary-fg-color-white);
+}
+
+/* Columns placement */
+.whichstandard__icon {
+  grid-column: 1;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  justify-content: center;
+}
+
+.whichstandard__icon img,
+.whichstandard__arrow img {
+  width: 100%;
+  /* NEW */
+  height: 100%;
+  /* NEW */
+  object-fit: contain;
+  /* NEW */
+}
+
+.whichstandard__what {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  /* stack title + subtitle */
+  justify-content: center;
+  /* center vertically in the grid cell */
+  align-items: flex-start;
+  /* left-align text in desktop */
+  text-align: left;
+}
+
+.whichstandard__arrow {
+  grid-column: 3;
+  width: var(--arrow-size)+10px;
+  height: var(--arrow-size);
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.whichstandard__answer {
+  grid-column: 4;
+}
+
+/* Merge icon over rows 3–4 */
+.whichstandard__item--icon-span-2 .whichstandard__icon {
+  grid-row: span 2;
+  /* already there */
+  align-self: center;
+  /* NEW: centers between rows 3 & 4 */
+  /* keep its fixed height so it doesn't stretch across both rows */
+  height: var(--icon-size);
+}
+
+/* Row 4 has no icon: shift its cells right */
+.whichstandard__item--no-icon .whichstandard__what {
+  grid-column: 2;
+}
+
+.whichstandard__item--no-icon .whichstandard__arrow {
+  grid-column: 3;
+}
+
+.whichstandard__item--no-icon .whichstandard__answer {
+  grid-column: 4;
+}
+
+/* Typography preserved */
+.whichstandard__what h3,
+.whichstandard__answer h3 {
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  font-size: 26px;
+  text-wrap: balance;
+  color: #333333;
+}
+
+.whichstandard__answer h3.light,
+.whichstandard__what h3.light {
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+/* Double arrow layout if used */
+.whichstandard__arrow--double {
+  flex-direction: column;
+  gap: 30px;
+  height: auto;
+}
+
+.whichstandard__what,
+.whichstandard__answer {
+  padding-top: 6px;
+  padding-bottom: 0;
 }
 
 .learn-more-button-container {
@@ -423,7 +584,7 @@
   .who-can-i-contact {
     margin-top: 5px;
     margin-bottom: 0px;
-  text-wrap: balance;
+    text-wrap: balance;
   }
 }
 
@@ -444,7 +605,7 @@
   .who-can-i-contact {
     margin-top: 10px;
     margin-bottom: 0px;
-  text-wrap: balance;
+    text-wrap: balance;
   }
 }
 
@@ -469,27 +630,70 @@
     line-height: 2rem;
   }
 
+  .mdx-list {
+    grid-template-columns: 1fr;
+    /* single column */
+  }
+
+  .mdx-list>* {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-top: 4px solid var(--md-secondary-fg-color-gray);
+  }
+
+  .mdx-list>*:first-child {
+    border-top: none;
+  }
+
+  .mdx-list>*:last-child {
+    border-bottom: 4px solid var(--md-secondary-fg-color-gray);
+  }
+
+  .mdx-list-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mdx-list-item>* {
+    justify-content: center;
+    text-align: center;
+  }
+
   .mdx-list-item .text-content {
-    width: calc(100% - 64px - 20px);
+    width: 100%;
+    text-align: center;
+  }
+
+  .mdx-list-item .text-content a {
+    font-weight: 400;
   }
 
   .mdx-list-item .icon-holder {
-    width: 64px;
-    height: 64px;
-    margin-right: 20px;
+    flex-shrink: 0;
+    width: 84px;
+    height: 84px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .mdx-list-item .arrow-holder {
-    width: 64px;
-    height: 64px;
-    margin-right: 20px;
+    display: none;
+  }
+
+  .mdx-list-item .arrow-holder-double {
+    display: none;
   }
 
   .mdx-list-item .text-content h3 {
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    font-size: 22px;
+    text-align: center;
+    font-weight: 700;
   }
 
   .mdx-list-item .text-content h3.light {
@@ -501,8 +705,43 @@
   }
 
   .microtransit-grid {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 0;
+    width: 100%;
+  }
+
+  .microtransit-item {
+    flex-direction: column;
+    /* was row */
+    align-items: center;
+    /* center horizontally */
+    text-align: center;
+    /* center text */
+    padding: 16px 20px;
+    /* optional: slightly tighter vertical padding */
+  }
+
+  .microtransit-item:last-child {
+    border-bottom: 2px solid var(--md-secondary-fg-color-white);
+  }
+
+  .microtransit-item svg {
+    margin: 0 0 12px 0;
+    /* remove right gap, add space below icon */
+  }
+
+  .microtransit-item div {
+    text-align: center;
+    width: 100%;
+  }
+
+  .arrow-holder {
+    display: none;
+  }
+
+  .arrow-holder-double {
+    display: none;
   }
 
   .gofs-qa__wrap {
@@ -516,8 +755,87 @@
   .who-can-i-contact {
     margin-top: 15px;
     margin-bottom: 0px;
-  text-wrap: balance;
+    text-wrap: balance;
   }
+
+  .whichstandard {
+    padding-inline-start: 0;
+    /* was default ~40px causing extra left space */
+    margin-inline-start: 0;
+    list-style: none;
+  }
+
+  /* put every piece in the single column */
+  .whichstandard__icon,
+  .whichstandard__what,
+  .whichstandard__answer,
+  .whichstandard__rule,
+  .whichstandard__rule-bottom {
+    grid-column: 1 / -1 !important;
+    /* KEEP */
+    display: flex;
+    /* or block, depending on the element */
+  }
+
+  .whichstandard__rule,
+  .whichstandard__rule-bottom {
+    display: none !important;
+  }
+
+  /* hide arrow on mobile (keep if you already have this) */
+  .whichstandard__arrow {
+    display: none;
+  }
+
+  /* center the narrow icon box within the grid track */
+  .whichstandard__icon {
+    justify-self: center;
+    width: calc(var(--icon-size) + 10px);
+    /* icon width + 5px padding each side */
+    padding: 0 5px;
+  }
+
+  .whichstandard__icon img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* center text blocks horizontally */
+  .whichstandard__what,
+  .whichstandard__answer {
+    align-items: center;
+    /* override desktop flex-start */
+    justify-content: center;
+    /* keep vertical balance if row grows */
+    text-align: center;
+  }
+
+  .whichstandard__what::after,
+  .whichstandard__answer::after {
+    content: none !important;
+  }
+
+  /* show the existing row rule element, but only from the 2nd row on */
+  .whichstandard>li:not(:first-of-type) .whichstandard__rule {
+    display: block !important;
+    /* re-enable if previously hidden */
+    grid-column: 1 / -1 !important;
+    /* span full width */
+    height: 4px;
+    background: #F0F0F0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .whichstandard>li.whichstandard__item--no-icon .whichstandard__rule {
+    display: none !important;
+  }
+
+  /* keep any bottom rule disabled */
+  .whichstandard__rule-bottom {
+    display: none !important;
+  }
+
 }
 
 @media screen and (min-width: 60em) {
