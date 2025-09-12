@@ -417,12 +417,24 @@
 }
 
 .whichstandard__item {
-  /* borders like your original */
-  border-top: 2px solid var(--md-secondary-fg-color-white);
+  border-top: 4px solid var(--md-secondary-fg-color-gray);
 }
 
 .whichstandard__item:last-child {
-  border-bottom: 2px solid var(--md-secondary-fg-color-white);
+  border-bottom: 4px solid var(--md-secondary-fg-color-gray);
+}
+
+.whichstandard__rule,
+.whichstandard__rule-bottom {
+  display: block;
+  grid-column: 1 / -1;
+  height: 4px;
+  background: var(--md-secondary-fg-color-gray);
+  margin: 0;
+}
+
+.whichstandard__item--no-icon .whichstandard__rule {
+  display: none !important;
 }
 
 /* Columns placement */
