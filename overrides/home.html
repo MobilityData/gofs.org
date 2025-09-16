@@ -22,6 +22,11 @@
         <div class="tx-hero">
             <div>
                 <p class="hero-text">{{text.t("pageTitle")}}</p>
+                <a href="https://github.com/GOFS-lite/GOFS-lite" target="_blank"
+                    title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary"
+                    style="margin-top: 0px; text-decoration: none;">
+                    {{text.t("gofsRepoButton")}}
+                </a>
             </div>
         </div>
     </div>
@@ -62,8 +67,8 @@
                         alt="Zone based microtransit icon" />
                 </div>
                 <div class="whichstandard__what">
-                    <h3>{{text.t("section1Subtitle2")}}</h3>
-                    <h3 class="light">{{text.t("section1Subtitle2part2")}}</h3>
+                    <h3 class="light">{{text.t("section1Subtitle2")}}</h3>
+                    <h3>{{text.t("section1Subtitle2part2")}}</h3>
                 </div>
                 <div class="whichstandard__arrow">
                     <!-- green arrow -->
@@ -82,15 +87,15 @@
                     <img src="/assets/landing/gofs-icon-predefined-routes.svg" alt="Zone based microtransit icon" />
                 </div>
                 <div class="whichstandard__what">
-                    <h3>{{text.t("section1Subtitle3")}}</h3>
-                    <h3 class="light">{{text.t("section1Subtitle3part2")}}</h3>
+                    <h3 class="light">{{text.t("section1Subtitle3")}}</h3>
+                    <h3>{{text.t("section1Subtitle3part2")}}</h3>
                 </div>
                 <div class="whichstandard__arrow" style="margin-top:5px;">
                     <!-- green arrow -->
                     <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
                 </div>
                 <div class="whichstandard__answer">
-                    <h3 class="light">{{text.t("section1TextBlock3")}}</h3>
+                    <h3>{{text.t("section1TextBlock3")}}</h3>
                 </div>
             </li>
 
@@ -98,14 +103,14 @@
             <li class="whichstandard__item whichstandard__item--no-icon">
                 <div class="whichstandard__rule" aria-hidden="true"></div>
                 <div class="whichstandard__what">
-                    <h3>{{text.t("section1Subtitle4")}}</h3>
+                    <h3 class="light">{{text.t("section1Subtitle4")}}</h3>
                 </div>
                 <div class="whichstandard__arrow">
                     <!-- green arrow -->
                     <img src="/assets/landing/arrow-gofs-green.svg" alt="" />
                 </div>
                 <div class="whichstandard__answer">
-                    <h3 class="light">{{text.t("section1TextBlock3part3")}}</h3>
+                    <h3>{{text.t("section1TextBlock3part3")}}</h3>
                 </div>
             </li>
 
@@ -197,11 +202,6 @@
                     <h1 style="color: #0A0A0A;">{{text.t("section3Title")}}</h1>
                 </header>
                 <p>{{text.t("section3Subtitle")}}</p>
-                <a href="https://github.com/GOFS-lite/GOFS-lite" target="_blank"
-                    title="{{ page.next_page.title | striptags }}" class="md-button md-button--primary"
-                    style="margin-top: 0px; text-decoration: none;">
-                    {{text.t("gofsRepoButton")}}
-                </a>
             </div>
         </div>
 </section>
@@ -215,7 +215,7 @@
 
         <!-- Left visual -->
         <div class="gofs-visual">
-            <img style="width: 540px;" src="assets/landing/gofs.png" alt="App preview">
+            <img style="width: 540px;" src="assets/landing/gofs_v2.png" alt="App preview">
         </div>
 
         <!-- Right content -->
