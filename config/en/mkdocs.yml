@@ -47,9 +47,9 @@ extra_css:
 #   - assets/javascript/anchor-redirects.js
 #   - assets/javascript/languageSwitchUrls.js
 extra:
-  # analytics:
-  #   provider: google
-  #   property: G-DRBTC7SSDT
+  analytics:
+    provider: google
+    property: G-9YQ6ZZRFN8
   consent:
     title: Cookie Consent
     description: >-
