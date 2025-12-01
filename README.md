@@ -21,9 +21,6 @@ This site was built using [MkDocs](https://www.mkdocs.org/), a static site gener
 1. Have [`requirements.txt`](requirements.txt) installed:
    - Linux: `pip install --force-reinstall -r requirements.txt`
    - macOS: `pip3 install --force-reinstall -r requirements.txt`
-1. Have [Material for MkDocs Insiders](https://squidfunk.github.io/mkdocs-material/insiders/`) installed. Substitute `${GH_TOKEN}` with a valid access token:
-   - Linux: `pip install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git`
-   - macOS: `pip3 install git+https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git`
 1. To run the site locally (command defined in `MakeFile`):
    - `make serve`
    - Then each language will have it's own address:
