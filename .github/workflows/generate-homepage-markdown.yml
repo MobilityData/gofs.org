@@ -1,0 +1,55 @@
+name: Generate homepage markdown
+
+# The GOFS homepage (overrides/home.html + overrides/locales/*.html) is a
+# Jinja2 template, unlike every other page on the site, which is authored
+# directly in markdown. This workflow builds the site, converts the
+# rendered homepage HTML (per locale) to markdown, and commits the result
+# back to the PR branch so agents requesting text/markdown get real
+# content instead of empty frontmatter.
+
+on:
+  pull_request:
+    paths:
+      - "overrides/home.html"
+      - "overrides/locales/*.html"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install MkDocs dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build site
+        run: mkdocs build
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install conversion script dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Convert homepage HTML to markdown
+        run: node scripts/html-to-markdown.js
+
+      - name: Commit generated markdown
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate homepage markdown for agents"
+          file_pattern: "docs/*/index.generated.md"
