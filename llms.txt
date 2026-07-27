@@ -1,0 +1,23 @@
+# GOFS - General On-Demand Feed Specification
+
+> GOFS is an open source, community-driven data standard for traveler-facing information about demand-responsive transportation. It provides real-time information about point-to-point, demand-responsive service within a zone, using a lightweight, easy-to-implement format. Maintained by MobilityData.
+
+## Resources
+- [GOFS specification (GitHub)](https://github.com/MobilityData/GOFS)
+- [Homepage](https://gofs.org/)
+
+## Related standards
+- [GTFS](https://gtfs.org/) — fixed-route transit
+- [GTFS-Flex](https://gtfs.org/community/extensions/flex/) — demand-responsive transit with deviation or fixed stops (static only)
+- [GBFS](https://gbfs.org/) — self-service shared vehicles (bikeshare, carshare)
+
+## When to use GOFS
+- Taxi / ridehail: GOFS
+- Zone-based microtransit: GOFS (includes real-time) or GTFS-Flex (static only)
+- Predefined routes with deviation: GTFS-Flex
+- Fixed stops: GTFS-Flex
+- Fixed-route transit: GTFS
+- Self-service shared vehicles: GBFS
+
+## Community
+- [#GOFS Slack channel (MobilityData Slack)](https://share.mobilitydata.org/slack)
