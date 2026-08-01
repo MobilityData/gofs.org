@@ -1,0 +1,11 @@
+{
+  "name": "gofs-homepage-md-generator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Converts the built GOFS homepage HTML (per locale) into markdown for AI agent consumption.",
+  "main": "html-to-markdown.js",
+  "dependencies": {
+    "jsdom": "^24.0.0",
+    "turndown": "^7.2.0"
+  }
+}
