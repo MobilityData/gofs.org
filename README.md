@@ -2,12 +2,9 @@
 
 Source code for [gofs.org](https://gofs.org/).
 
-This site was built using [MkDocs](https://www.mkdocs.org/), a static site generator, and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/), a technical documentation theme for MkDocs.
+This site was built using [MkDocs](https://www.mkdocs.org/), a static site generator, and `mkdocs-materialx`, a technical documentation theme for MkDocs (a fork of [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)).
 
 ## Building or Serving the site locally
-
-> [!WARNING]
-> A private token from MKDocs Material Insiders is required to build this site.
 
 1. In Terminal, change the directory to one where you wish to build the site.
 1. Ensure you have an up-to-date version of pip: 
@@ -18,14 +15,12 @@ This site was built using [MkDocs](https://www.mkdocs.org/), a static site gener
 1. Change the directory to the cloned repository, and create & enable a Python virtual environment:
    - `python3 -m venv venv`
    - `source venv/bin/activate`
-1. Have [`requirements.txt`](requirements.txt) installed:
-   - Linux: `pip install --force-reinstall -r requirements.txt`
-   - macOS: `pip3 install --force-reinstall -r requirements.txt`
-1. To run the site locally (command defined in `MakeFile`):
+1. Install dependencies, including the `mkdocs-materialx` theme (command defined in `Makefile`):
+   - `make setup`
+1. To run the site locally (command defined in `Makefile`):
    - `make serve`
-   - Then each language will have it's own address:
-     - English: `http://127.0.0.1:8000/`
-1. To build the site locally only (command defined in `MakeFile`):
+   - Then you can access the site via `http://127.0.0.1:8000/`
+1. To build the site locally only (command defined in `Makefile`):
    - `make build`
 1. Deactivate the Python virtual environment when done:
    - `deactivate`
