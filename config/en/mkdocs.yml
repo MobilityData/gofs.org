@@ -4,6 +4,8 @@ repo_url: https://github.com/MobilityData/GOFS
 repo_name: GOFS Repository
 docs_dir: ../../docs/en       # Where to find the markdown files
 site_dir: ../../generated/    # Where to put the HTML files
+exclude_docs: |               # Markdown generated for LLMs by .github/workflows/generate-geo-llm-files.yml, not site pages
+  *.generated.md
 
 validation:
   nav:
