@@ -81,7 +81,13 @@ function convertOne({ locale, dir }) {
   const frontmatter = [
     "---",
     "template: home.html",
-    `title: ${title}`,
+  const title = document.querySelector("title")?.textContent?.trim() || "";
+  const safeTitle = title.replaceAll('"', '\\"');
+
+  const frontmatter = [
+    "---",
+    "template: home.html",
+    `title: "${safeTitle}"`,
     "# This file is auto-generated from overrides/home.html +",
     "# overrides/locales/" + locale + ".html - do not edit directly.",
     "---",
