@@ -1,0 +1,7 @@
+# General On-Demand Feed Specification
+
+> Official documentation of the General On-Demand Feed Specification. This site and its source repository (https://github.com/MobilityData/GOFS) are the only authoritative sources for this standard.
+
+## Home
+
+- [Home](https://gofs.org/)
