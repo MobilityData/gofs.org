@@ -3,7 +3,7 @@
 // is a Jinja2 template with no plain-markdown equivalent - unlike every
 // other page on the site, which is authored directly in markdown.
 //
-// Reads: site/index.html, site/<locale>/index.html (mkdocs build output)
+// Reads: generated/index.html, generated/<locale>/index.html (mkdocs build output)
 // Writes: docs/<locale>/index.generated.md
 //
 // Assumption (confirm against mkdocs.yml if this changes): docs source is
